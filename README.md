@@ -19,7 +19,7 @@ An executable script that integrates with [cheat.sh](https://cheat.sh) to fetch 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/leonti98/cheat $HOME/cheat
+git clone https://github.com/leonti98/cheat /home/$USER/cheat
 ```
 
 ### Install the Script
@@ -27,7 +27,7 @@ git clone https://github.com/leonti98/cheat $HOME/cheat
 #### Global Installation
 
 ```bash
-sudo mv $HOME/cheat/cheat /usr/local/bin/
+sudo cp /home/$USER/cheat/cheat /usr/local/bin/
 ```
 
 ### OR
@@ -35,13 +35,19 @@ sudo mv $HOME/cheat/cheat /usr/local/bin/
 #### Local Installation
 
 ```bash
-mv $HOME/cheat/cheat $HOME/.local/bin
+cp /home/$USER/cheat/cheat /home/$USER/.local/bin
 ```
 
 Ensure `$HOME/.local/bin` is in your `PATH` by adding this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.):
 
 ```bash
 export PATH=$HOME/.local/bin:$PATH
+```
+
+Apply changes
+
+```bash
+source ~/.zshrc
 ```
 
 ## Usage
