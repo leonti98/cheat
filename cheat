@@ -1,0 +1,10 @@
+if [ -z "$1" ]; then
+    echo "Usage: cheat <command>"
+    exit 1
+fi
+
+tempfile=$(mktemp)
+# Fetch the content and remove ANSI escape codes using sed
+curl -sL cheat.sh/$1 | sed 's/\x1b\[[0-9;]*m//g' > "$tempfile"
+nvim "$tempfile"
+rm "$tempfile"
