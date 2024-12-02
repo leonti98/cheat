@@ -41,7 +41,7 @@ cp /home/$USER/cheat/cheat /home/$USER/.local/bin
 Ensure `$HOME/.local/bin` is in your `PATH` by adding this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.):
 
 ```bash
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$USER/.local/bin:$PATH
 ```
 
 Apply changes
@@ -65,11 +65,11 @@ cheat <command>
 
 ## How It Works
 
-1.  The script checks if a command is provided. If not, it displays usage instructions.
-2.  It fetches the cheat sheet for the given command from [cheat.sh](https://cheat.sh).
-3.  Strips out any ANSI escape codes for better readability.
-4.  Opens the cheat sheet in `nvim`.
-5.  Deletes the temporary file after closing `nvim`.
+1. The script checks if a command is provided. If not, it displays usage instructions.
+2. It fetches the cheat sheet for the given command from [cheat.sh](https://cheat.sh).
+3. Strips out any ANSI escape codes for better readability.
+4. Opens the cheat sheet in `nvim`.
+5. Deletes the temporary file after closing `nvim`.
 
 ## Contributions
 
